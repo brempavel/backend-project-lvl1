@@ -4,4 +4,3 @@ import greet from '../src/cli.js';
 
 console.log('Welcome to Brain Games!');
 greet();
-

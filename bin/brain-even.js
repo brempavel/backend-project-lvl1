@@ -8,8 +8,12 @@ const name = greet();
 
 const isValidAnswer = (answer) => answer === 'yes' || answer === 'no';
 const isEven = (number) => number % 2 === 0;
+const generateAnswer = (answer) =>
+  answer === 'yes'
+    ? console.log("'yes' is wrong answer ;(. Correct answer was 'no'.")
+    : console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
 
-const startGame = (name) => {
+const startGame = (userName) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   let counter = 0;
@@ -20,28 +24,21 @@ const startGame = (name) => {
     const answer = readlineSync.question('Your answer: ');
     if (!isValidAnswer(answer)) {
       console.log(
-        `${answer} is not valid answer ;(. Let's try again, ${name}!`
+        `${answer} is not valid answer ;(. Let's try again, ${userName}!`,
       );
       return;
     }
 
-    if (isEven(number)) {
-      if (answer === 'yes') {
-        counter += 1;
-      } else {
-        console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-        return;
-      }
+    if (isEven(number) && answer === 'no') {
+      generateAnswer(answer);
+      return;
+    }
+    if (answer === 'yes') {
+      generateAnswer(answer);
+      return;
     }
 
-    if (!isEven(number)) {
-      if (answer === 'no') {
-        counter += 1;
-      } else {
-        console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-        return;
-      }
-    }
+    counter += 1;
   }
 };
 
