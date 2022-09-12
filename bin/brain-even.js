@@ -11,7 +11,7 @@ const isEven = (number) => number % 2 === 0;
 
 const startGame = (name) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  
+
   let counter = 0;
   while (counter < 3) {
     const number = Math.floor(Math.random() * 100 + 1);
@@ -42,6 +42,7 @@ const startGame = (name) => {
         return;
       }
     }
+  }
 };
 
 startGame(name);
