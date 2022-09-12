@@ -7,9 +7,11 @@ console.log('Welcome to Brain Games!');
 const name = greet();
 
 const isValidAnswer = (answer) => answer === 'yes' || answer === 'no';
+const isEven = (number) => number % 2 === 0;
 
 const startGame = (name) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  
   let counter = 0;
   while (counter < 3) {
     const number = Math.floor(Math.random() * 100 + 1);
@@ -23,25 +25,23 @@ const startGame = (name) => {
       return;
     }
 
-    if (number % 2 === 0 && answer === 'no') {
-      console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
-      return;
+    if (isEven(number)) {
+      if (answer === 'yes') {
+        counter += 1;
+      } else {
+        console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+        return;
+      }
     }
 
-    if (number % 2 !== 0 && answer === 'yes') {
-      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-      return;
+    if (!isEven(number)) {
+      if (answer === 'no') {
+        counter += 1;
+      } else {
+        console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        return;
+      }
     }
-
-    if (number % 2 !== 0 && answer === 'no') {
-      counter += 1;
-    }
-
-    if (number % 2 === 0 && answer === 'yes') {
-      counter += 1;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
 };
 
 startGame(name);
