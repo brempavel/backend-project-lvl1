@@ -27,7 +27,7 @@ export const gameEngine = (rules, getQuestion, getRightAnswer) => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export const getRandomInt = (min, max) => (Math.floor(Math.random() * (max + 1 - min)) + min);
