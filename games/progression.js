@@ -5,15 +5,15 @@ export default () => {
   const getQuestion = () => {
     let num = getRandomInt(0, 50);
     const step = getRandomInt(1, 20);
-    const arr = [];
-    while (arr.length < 10) {
-      arr.push(num);
+    const progression = [];
+    while (progression.length < 10) {
+      progression.push(num);
       num += step;
     }
     const index = getRandomInt(0, 9);
-    const answer = arr[index];
-    arr[index] = '..'
-    console.log(`Question: ${arr.join(' ').toString()}`);
+    const answer = progression[index];
+    progression[index] = '..';
+    console.log(`Question: ${progression.join(' ').toString()}`);
     return answer.toString();
   };
   const getRightAnswer = (answer) => answer;

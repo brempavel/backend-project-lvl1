@@ -22,6 +22,8 @@ export default () => {
       case '*':
         answer = num1 * num2;
         break;
+      default:
+        break;
     }
     return answer.toString();
   };

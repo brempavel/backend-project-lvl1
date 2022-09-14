@@ -9,12 +9,14 @@ export default () => {
     return num1 > num2 ? [num1, num2] : [num2, num1];
   };
   const getRightAnswer = ([num1, num2]) => {
-    while(num2) {
-      let tmp = num2;
-      num2 = num1 % num2;
-      num1 = tmp;
+    let number1 = num1;
+    let number2 = num2;
+    while (number2) {
+      const tmp = number2;
+      number2 = number1 % number2;
+      number1 = tmp;
     }
-    return num1.toString();
+    return number1.toString();
   };
   gameEngine(rules, getQuestion, getRightAnswer);
 };
