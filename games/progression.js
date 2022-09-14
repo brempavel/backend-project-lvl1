@@ -14,8 +14,8 @@ export default () => {
     const answer = progression[index];
     progression[index] = '..';
     console.log(`Question: ${progression.join(' ').toString()}`);
-    return answer.toString();
+    return answer;
   };
-  const getRightAnswer = (answer) => answer;
+  const getRightAnswer = (answer) => answer.toString();
   gameEngine(rules, getQuestion, getRightAnswer);
 };
