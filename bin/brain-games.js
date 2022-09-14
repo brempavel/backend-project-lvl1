@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import { greet } from '../src/index.js';
 
-greet();
+console.log('Welcome to Brain Games!');
