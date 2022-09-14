@@ -6,7 +6,7 @@ Project consists of 5 games in the command line to train your logical thinking.
 ```
 git clone https://github.com/brempavel/backend-project-lvl1.git
 
-make install
+make setup
 ```
 
 ### Hexlet tests and linter status:
