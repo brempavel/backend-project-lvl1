@@ -13,3 +13,6 @@
 
 #### Brain-progression:
 <a href="https://asciinema.org/a/OVetcEtqoD4w4uo8v1yhawV0L" target="_blank"><img src="https://asciinema.org/a/OVetcEtqoD4w4uo8v1yhawV0L.svg" /></a>
+
+#### Brain-prime:
+<a href="https://asciinema.org/a/49Vm3FbdspXJGypNtWPzLD8qN" target="_blank"><img src="https://asciinema.org/a/49Vm3FbdspXJGypNtWPzLD8qN.svg" /></a>
